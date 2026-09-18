@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris AI Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌸 Iris Flower AI</h1>
+
+    <form method="POST">
+
+        <input name="sepal_length" placeholder="Sepal Length" required>
+        <input name="sepal_width" placeholder="Sepal Width" required>
+        <input name="petal_length" placeholder="Petal Length" required>
+        <input name="petal_width" placeholder="Petal Width" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h2>Flower: {{ result }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
